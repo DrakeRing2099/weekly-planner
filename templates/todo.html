@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    TODO 
+{% endblock %}
+
+{% block main %}
+<div class="container mt-4">
+    <h2>My To-Do List</h2>
+    <form action="/todo" method="post">
+        <ul class="list-group">
+            {% for day, things in tasks.items() %}
+                <div class="container">
+                <h3>{{ day }}</h3>
+                
+                {% for thing in things %}
+                    
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" name="checked_tasks" value="{{ thing["taskname"] }}">
+                    {{ thing["taskname"] }} ( {{ thing["starting_time"] }}:00 - {{ thing["ending_time"] }}:00 )
+                </li>
+                    
+                {% endfor %}
+                </div>
+            {% endfor %}
+        </ul>
+        <button type="submit" class="btn btn-primary mt-2">Done</button>
+    </form>
+</div>
+{% endblock %}

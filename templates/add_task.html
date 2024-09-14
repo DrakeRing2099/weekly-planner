@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add new Task
+{% endblock %}
+
+{% block main %}
+<div class="contain">
+<form action="/add_task" method="post">
+    <div class="mb-3">
+        <label for="taskname" class="form-label">Task</label>
+        <input type="text" class="taskname" name="taskname">
+    </div>
+    <select class="form-select" name="day">
+        <option disabled selected>Day</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+    </select>
+    <select class="form-select" name="starting_time">
+        <option disabled selected>Starting Time</option>
+        {% for i in timestamps %}
+        <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+    </select>
+    <select class="form-select" name="ending_time">
+        <option disabled selected>Ending Time</option>
+        {% for j in timestamps %}
+        <option value="{{ j }}">{{ j }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+    
+{% endblock %}

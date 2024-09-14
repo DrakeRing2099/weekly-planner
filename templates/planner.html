@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h2>Weekly Schedule</h2>
+    <div class="table-responsive">
+    <table class="week-planner">
+        <tr>
+            <th>Time / Day</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+        {% for i in times %}
+        <tr>    
+            {% for j in i %}
+                <td>{{ j }}</td>
+            {% endfor %}
+        {% endfor %}
+        </tr>
+    </table>
+    </div>
+    {% endblock %}

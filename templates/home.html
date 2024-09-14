@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<section class="hero-section text-center">
+    <h1>Plan Your Week Effortlessly</h1>
+    <p>Organize your tasks and events with an easy-to-use planner.</p>
+    <a href="\add_task" class="btn btn-primary">Get Started</a>
+</section>
+
+<div class="row justify-content-center">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">To-Do List</h5>
+          <p class="card-text">To-do lists are powerful tools for productivity that help prioritize tasks, ensuring that you focus on what's most important, leading to a more organized approach to tackling work and personal goals. They can significantly reduce stress by providing a clear outline of tasks and deadlines, which helps in managing time effectively. Moreover, to-do lists enable continuous tracking of progress, offering a sense of accomplishment and motivation as items are checked off, reinforcing productive behavior.</p>
+          <a href="/todo" class="btn btn-primary">To Do List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Weekly Planner</h5>
+          <p class="card-text">
+            Weekly planning transforms productivity by enabling long-term vision and daily action alignment, ensuring that each day's tasks contribute strategically to broader goals. This method enhances time management by distributing tasks across the week to balance the workload, preventing burnout and improving focus. Additionally, it provides clarity and context for what needs to be achieved within a set timeframe, fostering discipline and consistency in personal and professional life.</p>
+          <a href="/planner" class="btn btn-primary">Weekly PLanner</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
