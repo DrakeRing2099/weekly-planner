@@ -1,0 +1,133 @@
+/* General styling for the table */
+
+/* Header cells (Days of the week) */
+.week-planner th {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Standard cells (Time slots) */
+.week-planner td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Highlight for the current day (optional) */
+.week-planner .today {
+    background-color: #ddd;
+}
+
+/* Zebra striping for rows (optional) */
+.week-planner tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect for rows (optional) */
+.week-planner tr:hover {
+    background-color: #ddd;
+}
+
+/* Time column styling (optional) */
+.week-planner .time-slot {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+body {
+    /* Gradient Background */
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+}
+
+.contain {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+
+/* Custom Navbar Styling */
+.navbar {
+    background-color: #60730b; /* Customize with your color */
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #f8f9fa !important; /* Slightly lighter color on hover */
+}
+
+/* Adjust navbar padding and font size */
+.navbar-brand {
+    font-size: 1.4em;
+}
+
+.nav-item {
+    padding-left: 20px;
+}
+
+/* Change the navbar toggler icon color */
+.navbar-toggler {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .nav-item {
+        padding-left: 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Card Styling */
+.card {
+    transition: transform .2s; /* Smooth transition for scaling effect */
+    margin: 1rem; /* Add some margin around each card */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    border: none; /* Remove default border */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: scale(1.05); /* Scale up cards slightly on hover */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Larger shadow for lifted effect */
+}
+
+/* Card Image Styling */
+.card-img-top {
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    height: 200px; /* Fixed height or use object-fit */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+/* Card Body Styling */
+.card-body {
+    padding: 1rem; /* Consistent padding */
+}
+
+/* Card Title Styling */
+.card-title {
+    font-size: 1.25rem; /* Slightly larger font size */
+}
+
+/* Card Text Styling */
+.card-text {
+    color: #6c757d; /* Muted text color for less important text */
+}
